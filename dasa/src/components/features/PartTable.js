@@ -40,10 +40,10 @@ const PartTable = (props) => {
           return (
             <input 
             type="number"
+            className="input"
             max={maxValue}
             min={minValue}
             key={partValues.indexOf(value)}
-            className="input"
             />
           )
         })}
