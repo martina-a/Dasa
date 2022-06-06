@@ -1,13 +1,10 @@
 import './App.css';
-import PartTable from './components/features/PartTable'
-import EngineModel from './components/features/EngineModel'
+import Home from './components/home/Home'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <EngineModel title="Model"/>
-      </header>
+    <div>
+      <Home/>
     </div>
   );
 }

@@ -8,29 +8,26 @@ import '../../App.css'
  * @returns 
  */
 const EngineModel = (props) => { 
-  
-  /**
-   * Creates a datalist for the input options. 
-   *
-   * @returns 
-   */
-  const renderDataList = () => {
+  const models = props.models // An array of all possible engine models.
+  // TODO: set state variable for user choice here.
+
+  const modelOptions = () => {
     return (
-      <datalist id="models">
-        <option value="Diesel"/>
-        <option value="Gasoline"/>
-        <option value="E32"/>
-      </datalist>
+      <select id="models" className="input-options">
+        {models.map(model => {
+          return (
+            <option>{model}</option>
+          )
+        })}
+      </select>
     )
   }
-
+  
     return (
         <div className="model-container">
-          <h3 className="model-title">{props.title}</h3>
-            <div className="value-container">
-              <input list="models"/>
-              {renderDataList()}
-            </div>
+          <label>Engine Model
+            {modelOptions()}
+          </label>
         </div>
     )
   }
