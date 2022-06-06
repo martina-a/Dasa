@@ -1,22 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import PartTable from './components/features/PartTable'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <PartTable title='Engine' partValues={['Engine Value 1', 'Engine Value 2']} max={200} min={0}/>
       </header>
     </div>
   );
