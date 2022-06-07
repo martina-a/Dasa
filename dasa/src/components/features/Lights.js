@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from 'react'
+import Switch from '@mui/material/Switch'
 import '../../App.css'
 
 /**
@@ -8,13 +9,19 @@ import '../../App.css'
  * @returns 
  */
 const Lights = (props) => { 
+  const [switchState, setSwitchState] = useState(false)
+
+  const toggleSwitch = () => {
+    setSwitchState(!switchState)
+  }
+
     return (
         <div className="light-switch-container">
           <p className='lights-name'>{props.name}</p>
-          <label className="switch">
-            <input id="lights-input" type="checkbox"/>
-            <span className="slider"></span>
-          </label>
+          <Switch
+          checked={switchState}
+          onChange={() => toggleSwitch()}
+          />
         </div>
     )
   }

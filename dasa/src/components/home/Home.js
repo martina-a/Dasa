@@ -1,3 +1,4 @@
+import React from 'react'
 import LeftContainer from '../containers/LeftContainer'
 import RightContainer from '../containers/RightContainer'
 
@@ -10,7 +11,7 @@ import '../../App.css'
  */
 function Home() {
   return (
-    <div id='home-container'>
+    <div className='home-container'>
       <LeftContainer/>
       <RightContainer/>
     </div>

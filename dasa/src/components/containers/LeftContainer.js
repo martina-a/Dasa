@@ -1,3 +1,4 @@
+import React from 'react'
 import Lights from '../features/Lights'
 import Parts from '../features/Parts'
 
@@ -18,6 +19,7 @@ function LeftContainer() {
       max={100}
       min={10}
       />
+      <hr/>
       <h3>Transmission</h3>
       <Parts
       firstLabel='Transmission value 1'
@@ -25,6 +27,7 @@ function LeftContainer() {
       max={900}
       min={100}
       />
+      <hr/>
       <h3>Lights</h3>
       <Lights name='Forward Lights'/>
     </div>

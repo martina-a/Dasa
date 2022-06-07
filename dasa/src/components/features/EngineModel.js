@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from 'react'
+import { Select, MenuItem } from '@mui/material'
 import '../../App.css'
 
 /**
@@ -9,25 +10,34 @@ import '../../App.css'
  */
 const EngineModel = (props) => { 
   const models = props.models // An array of all possible engine models.
-  // TODO: set state variable for user choice here.
+  const [model, setModel] = useState(models[0])
+
+  const selectionChange = (selected) => {
+    setModel(selected)
+  }
 
   const modelOptions = () => {
     return (
-      <select id="models" className="input-options">
+      <Select 
+      className='select-model'
+      value={model}
+      onChange={e => selectionChange(e)}
+      >
         {models.map(model => {
           return (
-            <option>{model}</option>
+            <MenuItem key={models.indexOf(model)} value={model}>{model}</MenuItem>
           )
         })}
-      </select>
+      </Select>
     )
   }
   
     return (
         <div className="model-container">
-          <label>Engine Model
-            {modelOptions()}
-          </label>
+          <p>Engine Model</p>
+          <div>
+          {modelOptions()}
+          </div>
         </div>
     )
   }

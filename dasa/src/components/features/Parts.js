@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import '../../App.css'
 
 /**
@@ -23,7 +23,7 @@ const Parts = (props) => {
   const renderInputContent = () => {
     return (
       <form className="parts-form">
-        <label htmlFor="first-val">
+        <label htmlFor="first-val" className='parts-label'>
           {firstLabel}
           <input 
           type="number"
@@ -35,7 +35,7 @@ const Parts = (props) => {
           min={minValue}
         />
         </label>
-        <label htmlFor="second-val">
+        <label htmlFor="second-val" className='parts-label'>
           {secondLabel}
           <input 
           type="number" 

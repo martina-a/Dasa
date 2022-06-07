@@ -1,3 +1,4 @@
+import React from 'react'
 import EngineModel from '../features/EngineModel'
 import Parts from '../features/Parts'
 
@@ -18,8 +19,10 @@ function RightContainer() {
       max={100}
       min={0}
       />
+      <hr/>
       <h3>Model</h3>
       <EngineModel models={['Diesel', 'Petrol']}/>
+      <hr/>
     </div>
   );
 }
