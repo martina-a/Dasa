@@ -1,15 +1,15 @@
 import React from 'react'
-import Lights from '../features/Lights'
-import Parts from '../features/Parts'
+import Lights from '../features/lights/Lights'
+import Parts from '../features/parts/Parts'
 
 import '../../App.css'
 
 /**
- * Component for the left container. 
+ * Component for the left container.
  *
- * @returns 
+ * @returns
  */
-function LeftContainer() {
+function LeftContainer () {
   return (
     <div className='feature-container' id='left-container'>
       <h3>Engine</h3>
@@ -31,7 +31,7 @@ function LeftContainer() {
       <h3>Lights</h3>
       <Lights name='Forward Lights'/>
     </div>
-  );
+  )
 }
 
 export default LeftContainer

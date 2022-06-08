@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Switch from '@mui/material/Switch'
-import '../../App.css'
+import '../../../App.css'
 
 /**
  * Component for setting the vehicle lights.
@@ -19,6 +19,7 @@ const Lights = (props) => {
         <div className="light-switch-container">
           <p className='lights-name'>{props.name}</p>
           <Switch
+          className='switch'
           checked={switchState}
           onChange={() => toggleSwitch()}
           />

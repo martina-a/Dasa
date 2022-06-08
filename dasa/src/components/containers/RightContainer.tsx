@@ -1,6 +1,6 @@
 import React from 'react'
-import EngineModel from '../features/EngineModel'
-import Parts from '../features/Parts'
+import EngineModel from '../features/model/EngineModel'
+import Parts from '../features/parts/Parts'
 
 import '../../App.css'
 

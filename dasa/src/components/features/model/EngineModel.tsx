@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Select, MenuItem } from '@mui/material'
-import '../../App.css'
+import { Select, MenuItem, SelectChangeEvent } from '@mui/material'
+import '../../../App.css'
 
 /**
  * Component for setting the vehicle engine model.
@@ -8,11 +8,11 @@ import '../../App.css'
  * @param {object} props - Properties.
  * @returns 
  */
-const EngineModel = (props) => { 
+const EngineModel = (props: any = {}) => { 
   const models = props.models // An array of all possible engine models.
   const [model, setModel] = useState(models[0])
 
-  const selectionChange = (selected) => {
+  const selectionChange = (selected: SelectChangeEvent<any>) => {
     setModel(selected)
   }
 
@@ -23,9 +23,9 @@ const EngineModel = (props) => {
       value={model}
       onChange={e => selectionChange(e)}
       >
-        {models.map(model => {
+        {models.map((model: string) => {
           return (
-            <MenuItem key={models.indexOf(model)} value={model}>{model}</MenuItem>
+            <MenuItem key={models.indexOf(model)} value={model} className='options'>{model}</MenuItem>
           )
         })}
       </Select>

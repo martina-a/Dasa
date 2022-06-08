@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../App.css'
+import '../../../App.css'
 
 /**
  * A table-like component for vehicle parts.
@@ -12,8 +12,8 @@ const Parts = (props) => {
   const secondLabel = props.secondLabel // Second vehicle part label.
   const maxValue = props.max // The max value for the input fields.
   const minValue = props.min // The min value for the input fields.
-  const [firstVal, setFirstVal] = useState(0)
-  const [secondVal, setSecondVal] = useState(0)
+  const [firstVal, setFirstVal] = useState('0')
+  const [secondVal, setSecondVal] = useState('0')
 
   /**
    * Creates the contents of the input elements. 
@@ -23,7 +23,7 @@ const Parts = (props) => {
   const renderInputContent = () => {
     return (
       <form className="parts-form">
-        <label htmlFor="first-val" className='parts-label'>
+        <label aria-labelledby="first-val" className='parts-label'>
           {firstLabel}
           <input 
           type="number"
@@ -35,7 +35,7 @@ const Parts = (props) => {
           min={minValue}
         />
         </label>
-        <label htmlFor="second-val" className='parts-label'>
+        <label aria-labelledby="second-val" className='parts-label'>
           {secondLabel}
           <input 
           type="number" 

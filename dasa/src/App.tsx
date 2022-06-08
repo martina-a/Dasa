@@ -5,7 +5,7 @@ import Home from './components/home/Home'
 
 import './App.css'
 
-function App() {
+function App () {
   return (
     <div>
       <Header/>

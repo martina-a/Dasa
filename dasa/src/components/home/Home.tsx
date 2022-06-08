@@ -9,7 +9,7 @@ import '../../App.css'
  *
  * @returns 
  */
-function Home() {
+const Home = () => {
   return (
     <div className='home-container'>
       <LeftContainer/>

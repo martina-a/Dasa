@@ -11,19 +11,19 @@ import '../../App.css'
  *
  * @returns 
  */
-function NavBar(props) {
+function NavBar() {
   const [open, setOpen] = useState(false)
   
   const toggleMenu = () => {
-    let nav = document.getElementById('nav-bar')
-    let btn = document.getElementById('nav-btn')
+    let nav: any = document.getElementById('nav-bar')
+    let btn: any = document.getElementById('nav-btn')
 
-    if (!open) {
+    if (!open) { // If closed, add these to classlist.
       setOpen(true)
       nav.classList.add('open')
       btn.classList.add('selected')
     } else {
-      setOpen(false)
+      setOpen(false) // If open, remove them.
       nav.classList.remove('open')
       btn.classList.remove('selected')
     }
@@ -36,19 +36,19 @@ function NavBar(props) {
       </button>
       <div className='menu-item' onClick={() => toggleMenu()}>
         <BuildRoundedIcon sx={{ color: pink[500] }} className='menu-icon'/>
-        <a href="#section" className='menu-link'>
+        <a href="/" className='menu-link'>
         Configuration
         </a>
       </div>
       <div className='menu-item' onClick={() => toggleMenu()}>
         <AssessmentIcon sx={{ color: pink[500] }} className='menu-icon'/>
-        <a href="#section" className='menu-link'>
+        <a href="/status" className='menu-link'>
         Status
         </a>
       </div>
       <div className='menu-item' onClick={() => toggleMenu()}>
         <NotesSharpIcon sx={{ color: pink[500] }} className='menu-icon'/>
-        <a href="#section" className='menu-link'>
+        <a href="/logs" className='menu-link'>
         Logs
         </a>
       </div>
