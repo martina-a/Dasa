@@ -48,16 +48,16 @@ const Parts = (props: any = {}) => {
           />
         </label>
       </form>
-      )
-}
-  
+    )
+  }
+
   return (
         <div className="table-container">
             <div className="value-container">
               {renderInputContent()}
             </div>
         </div>
-    )
+  )
 }
 
 export default Parts
